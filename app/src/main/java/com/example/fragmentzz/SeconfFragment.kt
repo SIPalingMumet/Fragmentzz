@@ -15,7 +15,8 @@ class SecondFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        communicationViewModel = ViewModelProvider.of(requireActivity()).get (CommunicationViewModel::class.java)
+        communicationViewModel =
+            ViewModelProvider(this).get(CommunicationViewModel::class.java)
 
     }
 
