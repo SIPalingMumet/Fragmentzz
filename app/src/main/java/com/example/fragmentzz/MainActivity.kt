@@ -1,28 +1,22 @@
-package com.example.fragmentzz
+package com.example.fragment
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import kotlinx.android.synthetic.main.activity_main.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager.widget.ViewPager
+import com.example.fragmentzz.R
 
-class CommunicationViewModel : ViewModel() {
-    private val mName = MutableLiveData<String>()
-    val name: LiveData<String>
-        get() = mName
-    fun setName(name: String) {
-        mName.value = name
-    }
-}
+import com.google.android.material.tabs.TabLayout
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        view_pager.adapter = ViewPagerAdapter( this,
-            supportFragmentManager)
+
+        val view_pager = findViewById<ViewPager>(R.id.view_pager)
+        val tabs = findViewById<TabLayout>(R.id.tabs)
+
+        view_pager.adapter = ViewPageAdapter(this,supportFragmentManager)
         tabs.setupWithViewPager(view_pager)
     }
-}
+    class mainActivity}

@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 
+
 class SecondFragment : Fragment() {
     private var communicationViewModel: CommunicationViewModel? = null
     private var txtName: TextView? = null
